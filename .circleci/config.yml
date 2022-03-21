@@ -15,7 +15,7 @@ jobs:
 
   test:
     docker:
-      - image: cimg/ruby:2.7
+      - image: cimg/ruby:2.7-node
       - image: circleci/mysql:5.5
         environment:
           MYSQL_ROOT_PASSWORD: password
@@ -37,7 +37,7 @@ jobs:
       - run:
           name: yarn Install
           command: yarn install
-      - run: bundle exec src/bin/webpack
+      - run: bundle exec bin/webpack
       - run:
           name: Rspec
           command: bundle exec rspec
