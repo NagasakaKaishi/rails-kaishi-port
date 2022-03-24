@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "Schedules_request", type: :request do
-  describe "スケジュール管理ページ" do
+RSpec.describe "HomePages", type: :request do
+  describe "GET /index" do
     before do
       get root_path
     end
