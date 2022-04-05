@@ -1,18 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Training:</strong>
-  <%= @event.training %>
+  <strong>Title:</strong>
+  <%= @event.title %>
 </p>
 
 <p>
-  <strong>Weight:</strong>
-  <%= @event.weight %>
-</p>
-
-<p>
-  <strong>Set:</strong>
-  <%= @event.set %>
+  <strong>Description:</strong>
+  <%= @event.description %>
 </p>
 
 <p>
@@ -23,11 +18,6 @@
 <p>
   <strong>End date:</strong>
   <%= @event.end_date %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @event.user_id %>
 </p>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |

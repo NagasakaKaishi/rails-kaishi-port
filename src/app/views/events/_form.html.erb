@@ -12,18 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :training %>
-    <%= form.text_field :training %>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :weight %>
-    <%= form.text_field :weight %>
-  </div>
-
-  <div class="field">
-    <%= form.label :set %>
-    <%= form.number_field :set %>
+    <%= form.label :description %>
+    <%= form.text_area :description %>
   </div>
 
   <div class="field">
@@ -34,11 +29,6 @@
   <div class="field">
     <%= form.label :end_date %>
     <%= form.datetime_select :end_date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
   </div>
 
   <div class="actions">
