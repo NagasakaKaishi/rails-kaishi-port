@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let(:user) { build(:user)}
+  let(:user) { build(:user) }
   describe 'validate name' do
     it 'when present is valid' do
       user.name = "test"
@@ -107,6 +107,14 @@ RSpec.describe User, type: :model do
       user.email = 'TONY@EXAMPLE.COM'
       user.save!
       expect(user.reload.email).to eq 'tony@example.com'
+    end
+  end
+
+  describe 'associated events' do
+    it 'shoud be destroyed' do
+      user.save
+      user.event.create(title: 'title', description: 'description', start_date: '2022-04-05 06:55:40', end_date: '2022-04-05 06:55:40')
+      expect{ user.destroy }.to change{ Event.count }.by(-1)
     end
   end
 end

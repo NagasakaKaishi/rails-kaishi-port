@@ -4,5 +4,6 @@ FactoryBot.define do
     description { "MyText" }
     start_date { "2022-04-05 06:55:40" }
     end_date { "2022-04-05 06:55:40" }
+    association :user
   end
 end
