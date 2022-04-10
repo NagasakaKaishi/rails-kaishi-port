@@ -13,6 +13,7 @@ class EventsController < ApplicationController
   # GET /events/new
   def new
     @event = Event.new
+    @click_time = params[:time].to_date
   end
 
   # GET /events/1/edit
@@ -50,11 +51,7 @@ class EventsController < ApplicationController
   # DELETE /events/1 or /events/1.json
   def destroy
     @event.destroy
-
-    respond_to do |format|
-      format.html { redirect_to events_url, notice: "Event was successfully destroyed." }
-      format.json { head :no_content }
-    end
+    redirect_to events_url
   end
 
   private

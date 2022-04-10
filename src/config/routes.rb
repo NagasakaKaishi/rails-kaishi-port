@@ -8,4 +8,5 @@ Rails.application.routes.draw do
     sessions: "users/sessions",
   }
   resources :events, only: [:index]
+  post '/home_pages/guest_sign_in', to: 'home_pages#guest_sign_in'
 end
