@@ -13,6 +13,7 @@ class EventsController < ApplicationController
   # GET /events/new
   def new
     @event = Event.new
+    @click_time = params[:time].to_date
   end
 
   # GET /events/1/edit

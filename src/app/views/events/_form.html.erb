@@ -21,15 +21,8 @@
     <%= form.text_area :description %>
   </div>
 
-  <div class="field">
-    <%= form.label :start_date %>
-    <%= form.datetime_select :start_date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :end_date %>
-    <%= form.datetime_select :end_date %>
-  </div>
+  <%= form.hidden_field :start_date, value: @click_time %>
+  <%= form.hidden_field :end_date, value: @click_time %>
 
   <div class="actions">
     <%= form.submit %>
