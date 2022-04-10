@@ -11,20 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="form-group">
+    <%= form.label "トレーニング" %>
+    <%= form.text_field :title, class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+  <div class="form-group">
+    <%= form.label "メモ" %>
+    <%= form.text_area :description, class:"form-control" %>
   </div>
+  
+  <% if event.start_date.blank? %>
+    <%= form.hidden_field :start_date, value: @click_time %>
+  <% end %>
 
-  <%= form.hidden_field :start_date, value: @click_time %>
-  <%= form.hidden_field :end_date, value: @click_time %>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <% if event.end_date.blank? %>
+    <%= form.hidden_field :end_date, value: @click_time %>
+  <% end %>
+  
+  <%= form.submit nil, class: 'btn btn-primary' %>
 <% end %>

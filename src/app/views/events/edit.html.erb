@@ -1,6 +1,7 @@
-<h1>Editing Event</h1>
+<h1>編集</h1>
 
 <%= render 'form', event: @event %>
 
-<%= link_to 'Show', @event %> |
-<%= link_to 'Back', events_path %>
+<%= link_to '見る', @event %> |
+<%= link_to '戻る', events_path %> |
+<%= link_to '破棄する', @event, method: :delete, data: { confirm: '本当に削除しますか？' } %>
