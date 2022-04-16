@@ -37,23 +37,8 @@ RSpec.describe Event, type: :model do
   end
 
   describe 'validate description' do
-    it 'when present is valid' do
-      event.description = 'MyText'
-      expect(event).to be_valid
-    end
-
-    it 'when blank is invalid' do
-      event.description = '  '
-      expect(event).to be_invalid
-    end
-
-    it 'when empty is invalid' do
-      event.description = ''
-      expect(event).to be_invalid
-    end
-
-    it 'when nil is invalid' do
-      event.description = nil
+    it 'length should not be too long' do
+      event.description = 'a' * 141
       expect(event).to be_invalid
     end
   end
