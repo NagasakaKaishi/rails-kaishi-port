@@ -1,0 +1,8 @@
+<br>
+
+<h2>今月のトレーニングセット数の記録</h2>
+
+<br>
+
+
+<%= line_chart @data.group_by_day(:start_date).sum(:set) %>

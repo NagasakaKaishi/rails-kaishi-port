@@ -4,6 +4,9 @@ class EventsController < ApplicationController
   # GET /events or /events.json
   def index
     @events = current_user.event.all
+    @event_day = current_user.event.
+    where(start_date: Date.today.beginning_of_month..Date.today.end_of_month).
+    select(:start_date).distinct.count
   end
 
   # GET /events/1 or /events/1.json
