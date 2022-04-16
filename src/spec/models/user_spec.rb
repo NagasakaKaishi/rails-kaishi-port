@@ -113,7 +113,7 @@ RSpec.describe User, type: :model do
   describe 'associated events' do
     it 'shoud be destroyed' do
       user.save
-      user.event.create(title: 'title', description: 'description', start_date: '2022-04-05 06:55:40', end_date: '2022-04-05 06:55:40')
+      user.event.create(title: 'title', description: 'description', set: 3, start_date: '2022-04-05 06:55:40', end_date: '2022-04-05 06:55:40')
       expect{ user.destroy }.to change{ Event.count }.by(-1)
     end
   end

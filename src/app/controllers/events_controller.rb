@@ -4,6 +4,9 @@ class EventsController < ApplicationController
   # GET /events or /events.json
   def index
     @events = current_user.event.all
+    @event_day = current_user.event.
+    where(start_date: Date.today.beginning_of_month..Date.today.end_of_month).
+    select(:start_date).distinct.count
   end
 
   # GET /events/1 or /events/1.json
@@ -14,10 +17,12 @@ class EventsController < ApplicationController
   def new
     @event = Event.new
     @click_time = params[:time].to_date
+    @trainings = current_user.training.all
   end
 
   # GET /events/1/edit
   def edit
+    @trainings = current_user.training.all
   end
 
   # POST /events or /events.json
@@ -62,6 +67,6 @@ class EventsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def event_params
-      params.require(:event).permit(:title, :description, :start_date, :end_date)
+      params.require(:event).permit(:title, :description, :set, :start_date, :end_date)
     end
 end

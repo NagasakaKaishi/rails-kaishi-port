@@ -1,6 +1,7 @@
 class User < ApplicationRecord
 
   has_many :event, dependent: :destroy
+  has_many :training, dependent: :destroy
   before_save :downcase_email
 
   validates :name, presence: true, length: { maximum: 50 }
