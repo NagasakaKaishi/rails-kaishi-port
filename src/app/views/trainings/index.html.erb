@@ -1,0 +1,5 @@
+<% @trainings.each do |training| %>
+  <%= training.name %> | 
+  <%= link_to "削除", training_path(training.id), method: :delete, data: { confirm: "本当に削除しますか？" } %></br>
+<% end %>
+<%= link_to 'カレンダーページへ', events_path %>

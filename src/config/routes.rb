@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     sessions: "users/sessions",
   }
   resources :events
+  resources :trainings, only: [:new, :index, :create, :destroy]
   post '/home_pages/guest_sign_in', to: 'home_pages#guest_sign_in'
 end

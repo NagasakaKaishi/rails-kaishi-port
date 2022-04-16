@@ -14,10 +14,12 @@ class EventsController < ApplicationController
   def new
     @event = Event.new
     @click_time = params[:time].to_date
+    @trainings = current_user.training.all
   end
 
   # GET /events/1/edit
   def edit
+    @trainings = current_user.training.all
   end
 
   # POST /events or /events.json
