@@ -13,7 +13,9 @@
 
   <div class="form-group">
     <%= form.label "トレーニング" %>
-    <%= form.text_field :title, class:"form-control" %>
+    <%= form.collection_select(:title, @trainings, :name, :name) %>
+    <%= link_to "トレーニング種目を新規作成", new_training_path %> または
+    <%= link_to "トレーニング種目一覧表示", trainings_path %>
   </div>
 
   <div class="form-group">
