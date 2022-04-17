@@ -4,7 +4,20 @@
 
 
 # About
-If you use this app,it will help make training a habit.
+If you use this app, it helps make training a habit by allowing you to record your daily workouts.
+
+# Future features
+
+For now, you can use these features.
+
+* Keep a record of your training.
+* Show the history of your training.
+* View training records in graphs.
+* Login function.
+* Guest login function
+* Additional training menu functions
+
+# Pages
 
 
 # Installation
@@ -26,14 +39,6 @@ I will explain how to use it.
 ![sample2](./sample2_image.png)
 
 ![sample3](./sample3_image.png)
-
-# Future features
-
-For now, you can use these features.
-
-* keep a record of your training.
-* Show the history of your training.
-* Login function.
 
 
 # Author
