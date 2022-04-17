@@ -57,6 +57,9 @@ groupdateのgemを併用することでわかりやすく表示。
 ## 4. クリックした日付にトレーニングを記録する
 javascriptにより本機能を実現。
 
+# ER図
+![sample2](https://github.com/NagasakaKaishi/rails-kaishi-port/blob/main/er-graph.png)
+
 # 作成者
  
 * name: 長坂　海志(Nagasaka Kaishi)
