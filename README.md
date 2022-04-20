@@ -1,9 +1,12 @@
-#### 本アプリは私がポテパンキャンプでの経験を基に作成したポートフォリオです。
-
-#### こちらから本アプリにアクセス出来ます。[Heroku.](https://rails-kaishi-port.herokuapp.com)
+### アプリ名は「Training Footprints」です。
+私がポテパンキャンプでの経験を基に作成したポートフォリオです。
+こちらから本アプリにアクセス出来ます。[Heroku.](https://rails-kaishi-port.herokuapp.com)
 
 # 概要
 毎日のトレーニングを記録することができるので、トレーニングの習慣化に役立ちます。
+### なぜ作ったのか
+私は筋トレを３年間ほど続けているのですが、トレーニングの継続を失敗した経験が何度もありました。
+継続できた要因の一つとして"トレーニングを記録する"ということが重要だと感じ、本アプリを制作することにしました。
 
 # 機能一覧
 
@@ -53,6 +56,9 @@ groupdateのgemを併用することでわかりやすく表示。
 
 ## 4. クリックした日付にトレーニングを記録する
 javascriptにより本機能を実現。
+
+# ER図
+![sample2](https://github.com/NagasakaKaishi/rails-kaishi-port/blob/main/er-graph.png)
 
 # 作成者
  
